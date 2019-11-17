@@ -2,15 +2,16 @@ let express = require("express");
 let morgan = require("morgan")
 let bodyParser = require("body-parser");
 let uuid = require("uuid");
-let mongoose = require('mongoose');
-let {PostArray} = require('./model.js')
+let mongoose = require("mongoose");
+let {PostArray} = require("./model.js")
+const  {DATABASE_URL, PORT} = require("./config.js");
 
 
 let app = express();
 let jsonParser = bodyParser.json();
 //js, css and html in the 'public' named folder
-app.use(express.static('public'));
-app.use(morgan("combined"));
+app.use(express.static("public"));
+app.use(morgan("dev"));
 
 //Default data
 
@@ -180,15 +181,15 @@ app.put("/blog-posts/:id", jsonParser, (req, res) => {
 
 let server;
 
-function runServer(port, databaseURL) {
+function runServer(PORT, databaseURL) {
     return new Promise((resolve, reject) => {
         mongoose.connect(databaseURL, err => {
             if(err) {
                 return reject(err);
             }
             else {
-                server = app.listen(port, () => {
-                    console.log(`App is running on port ${port}`);
+                server = app.listen(PORT, () => {
+                    console.log(`App is running on port ${PORT}`);
                     resolve();
                 })
                 .on('error', err => {

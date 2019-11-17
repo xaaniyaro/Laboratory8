@@ -10,7 +10,7 @@ let postSchema = mongoose.Schema({
     publishDate: {type: Date}
 });
 
-let Posts = mongoose.model('blog-posts-model', postSchema);
+let Posts = mongoose.model('blog-posts', postSchema);
 
 let PostArray = {
     getAllPosts: async function() {

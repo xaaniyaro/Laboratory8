@@ -3,15 +3,15 @@ let morgan = require("morgan")
 let bodyParser = require("body-parser");
 let uuid = require("uuid");
 let mongoose = require("mongoose");
-let {PostArray} = require("./model.js")
-const  {DATABASE_URL, PORT} = require("./config.js");
+let {PostArray} = require("./model")
+const  {DATABASE_URL, PORT} = require("./config");
 
 
 let app = express();
 let jsonParser = bodyParser.json();
 //js, css and html in the 'public' named folder
 app.use(express.static("public"));
-app.use(morgan("dev"));
+app.use(morgan("combined"));
 
 //Default data
 

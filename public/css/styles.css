@@ -1,7 +1,7 @@
 
 
 header{
-    font-family: 'Amita', cursive;
+    font-family: 'Calistoga', cursive;
     font-size: 30px;
     background-color:  #5dade2;
     
@@ -29,6 +29,7 @@ p {
 form{
     width: 600px;
     padding: 0;
+    background: #555;
 }
 
 input{

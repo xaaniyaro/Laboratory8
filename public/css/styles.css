@@ -3,8 +3,7 @@
 header{
     font-family: 'Calistoga', cursive;
     font-size: 30px;
-    background-color:  #5dade2;
-    
+    border-bottom: 2px black;
     margin-bottom: 20px;
 }
 
@@ -29,7 +28,6 @@ p {
 form{
     width: 600px;
     padding: 0;
-    background: #555;
 }
 
 input{

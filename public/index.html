@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Lab7</title>
+    <link href="./css/styles.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Amita|Roboto&display=swap" rel="stylesheet"> 
+  </head>
+  <body>
+    <header>
+      <h1> Best books to read </h1>
+    </header>
+    <section>
+      <ul id="blogList">
+      </ul>
+      <form id="postForm">
+          <fieldset>
+              <legend>
+                  New post
+              </legend>
+              <p class="pform">
+                  <label for="postTitle">Title:</label>
+              </p class="pform">
+            <input type="text" id="postTitle"/>
+            <p class="pform">
+              <label for="postContent">Content:</label>
+            </p class="pform">
+            <textarea rows ="5" cols="50" id="postContent"></textarea>
+            <p class="pform">
+              <label for="postAuthor">Author:</label>
+            </p class="pform">
+            <input type="text" id="postAuthor"/>
+            <p class="pform">
+              <label for="postPublishDate">Date:</label>
+            </p class="pform">
+            <input type="date" id="postPublishDate" min="2018-01-01"  max="2020-12-31"/>
+            <p class="pform">
+              <button type="button" id="newPostButton" class="button">Submit</button>
+            </p class="pform">
+      </fieldset>
+  
+      <form id="deleteForm">
+          <fieldset>
+              <legend>
+                  Delete post
+              </legend>
+              <p class="pform">
+                  <label for="postIDelete">Post ID:</label>
+              </p class="pform">
+            <input type="text" id="postIDelete"/>
+            <p class="pform">
+              <button type="button" id="deletePostButton" class="button">Submit</button>
+            </p class="pform">
+      </fieldset>
+  
+      <form id="updateForm">
+          <fieldset>
+              <legend>
+                  Update post
+              </legend>
+            <p class="pform">
+              <label for="postIDU">Post ID:</label>
+            </p class="pform">
+            <input type="text" id="postIDU"/>
+            <p class="pform">
+            <p class="pform">
+              <label for="postTitleU">Title:</label>
+            </p class="pform">
+            <input type="text" id="postTitleU"/>
+            <p class="pform">
+              <label for="postContentU">Content:</label>
+            </p class="pform">
+            <textarea rows ="5" cols="50" id="postContentU"></textarea>
+            <p class="pform">
+              <label for="postAuthorU">Author:</label>
+            </p class="pform">
+            <input type="text" id="postAuthorU"/>
+            <p class="pform">
+              <label for="postPublishDateU">Date:</label>
+            </p class="pform">
+            <input type="date" id="postPublishDateU" min="2018-01-01"  max="2020-12-31"/>
+            <p class="pform">
+              <button type="button" id="updateButton" class="button">Submit</button>
+            </p class="pform">
+      </fieldset>
+    </section>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
